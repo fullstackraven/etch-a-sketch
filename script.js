@@ -37,7 +37,7 @@ slider.addEventListener('input', function(){
         const div = document.createElement('div');
         div.classList.add('pixel');
         div.addEventListener('mouseover', function(event){
-            event.target.style.backgroundColor = 'black';
+            event.target.style.backgroundColor = 'rgb(153,153,153)';
         })
         grid.appendChild(div); 
     }
@@ -109,6 +109,7 @@ function setCurrentMode(newMode) {
 monoButton.onclick = () => setCurrentMode('mono');
 rgbButton.onclick = () => setCurrentMode('rgb');
 eraserButton.onclick = () => setCurrentMode('eraser');
+slider.onclick = () => setCurrentMode('slider')
 
 const btn = document.getElementsByClassName('btn');
 
@@ -128,5 +129,9 @@ function removeButtonToggle(newMode) {
    } else if (newMode === 'eraser') {
     monoButton.classList.remove('btn-on');
     rgbButton.classList.remove('btn-on');
+   } else if (newMode === 'slider') {
+    monoButton.classList.remove('btn-on');
+    rgbButton.classList.remove('btn-on');
+    eraserButton.classList.remove('btn-on');
    }
 };

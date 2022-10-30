@@ -9,21 +9,28 @@
 </head>
 <body>
     <h1 id="title">Etch-a-Sketch</h1>
+    
     <div class="btns">
         <button id="reset">Reset</button>
-        <button id="black">Black</button>
-        <button id="rgb">RGB</button>
+        <button id="eraser" class="btn">Eraser</button>
+        <button id="rgb" class="btn">RGB</button>
+        <button id="mono" class="btn">Mono</button>
         <div class="color-prompt">
             <input type="color" id="color" value="#33333">
             <p>Select a color</p>
         </div>
-        <div class="slider-value">
-            <input type="range" min="2" max="100" value="16" id="slider">
+        <div class="slider-box">
+            <div class="slider-value">
+                <input type="range" min="2" max="100" value="16" id="slider">
+            </div>
+            <div class="grid-box">
+                <div class="grid-text">Grid Size:</div>
             <p class="value">16</p>
+            </div>
         </div>
     </div>
     <div id="grid" class="container"></div>
-    <footer>Made by: <a href="https://github.com/fullstackraven"> <img id="github-logo" src="./img/github-transparent.png" alt="GitHub Logo"> Full Stack Raven <img id="fsr-logo" src="./img/fsr-pixel-art.jpg" alt="FSR Logo"> </a></footer>
+    <footer>Created by: <a href="https://github.com/fullstackraven"> <img id="github-logo" src="./img/github-transparent.png" alt="GitHub Logo"> Full Stack Raven <img id="fsr-logo" src="./img/fsr-pixel-art.jpg" alt="FSR Logo"> </a></footer>
     <script src="script.js"></script>
 </body>
 </html>

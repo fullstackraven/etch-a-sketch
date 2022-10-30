@@ -12,32 +12,35 @@ body{
 }
 
 h1{
-    font-size: 70px;
+    font-size: 60px;
     color: black;
-    text-shadow: 5px 5px 10px rgb(255, 255, 255);
+    border: 4px dashed black;
+    padding: 20px;
 }
 
 h1:hover {
     color: #FCAB55;
+    border: none;
 }
 
 .btns{
     display: flex;
     flex-direction: row-reverse;
-    width: 800px;
+    width: 900px;
     height: 60px;
     padding: 20px;
     border: solid 4px black;
     border-radius: 10px;
     background-color: rgb(153, 153, 153);
+    box-shadow: 5px 5px 5px black;
     justify-content: space-evenly;
 }
 
 button{
     width: 100px;
     font-size: 28px;
-    background-color: white;
-    box-shadow: 5px 5px 10px;
+    color: white;
+    background-color: black;
     border-radius: 10px;
 }
 
@@ -47,6 +50,21 @@ button{
     align-items: center;
     font-size: 20px;
     text-shadow: 2px 2px 2px white;
+}
+
+.grid-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px white;
+}
+
+.grid-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
 }
 
 p {
@@ -72,6 +90,8 @@ input[type="color"]::-webkit-color-swatch {
 
 #color:hover{
     transform: scale(1.1);
+    border: 2px solid #FCAB55;
+    border-radius: 50px;
 }
 
 #color:active{
@@ -80,17 +100,34 @@ input[type="color"]::-webkit-color-swatch {
 
 button:hover{ 
     transition: transform 0.25s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.2);
     border: 4px solid #FCAB55;
     cursor: pointer;
 }
 
-button:active{
-    transform: scale(1.3);
+.btn-on{
+    transform: scale(1.1);
+    border: 4px solid #FCAB55;
+}
+
+#eraser {
+    background-color: pink;
+    font-size: 24px;
 }
 
 #rgb{
     background: linear-gradient(to right, #e30d26, #3ac21b, #1625c8);
+}
+
+#reset{
+    background-color: rgb(153, 153, 153);
+}
+
+.slider-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 }
 
 .slider-value{
@@ -105,6 +142,7 @@ button:active{
     background: black;
     outline: none;
     border-radius: 50px;
+    margin-bottom: 10px;
 }
 
 #slider::-webkit-slider-thumb {
@@ -127,27 +165,26 @@ button:active{
 
 
 .value{
-    font-size: 30px;
+    font-size: 20px;
     padding-left: 10px;
     color: black;
     text-shadow: 2px 2px 2px white;
 
 }
 
-.grid{
-    margin-top: 50px;
+#grid{
+    margin-top: 20px;
     display: inline-grid;
     grid-template-columns: repeat(16, 2fr);
     grid-template-rows: repeat(16, 2fr);
-    border: 5px solid white;
-    border-radius: 5px;
+    border: 10px solid black;
+    border-radius: 10px;
     height: 575px;
     width: 575px;
     background-color: gray;
-    box-shadow: 10px 10px;
 }
 
-.cell{
+.pixel{
     background-color: white;
     border: 1px solid black;
 }
